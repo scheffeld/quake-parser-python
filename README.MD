@@ -28,3 +28,67 @@ Rode o projeto:
 ```shell
 python main.py
 ```
+
+### Endpoints
+
+#### GET: /api/v1/healthcheck
+
+##### Response
+
+```JSON
+{
+  "uptime": 4.496053299,
+  "status": "UP",
+  "port": 3001,
+  "timestamp": 1607812833792
+}
+```
+
+#### GET: /api/v1/games
+
+##### Response
+
+```JSON
+{
+    "game_1": {
+        "total_kills": 0,
+        "players": [
+            "Isgalamido"
+        ],
+        "kills": {
+            "Isgalamido": 0
+        }
+    },
+    "game_2": {
+        "total_kills": 11,
+        "players": [
+            "Isgalamido",
+            "Dono da Bola",
+            "Mocinha"
+        ],
+        "kills": {
+            "Isgalamido": -7,
+            "Dono da Bola": 0,
+            "Mocinha": 0
+        }
+    }
+}
+```
+
+#### GET: /api/v1/games/:id
+
+##### Response
+
+```JSON
+{
+    "game_1": {
+        "total_kills": 0,
+        "players": [
+            "Isgalamido"
+        ],
+        "kills": {
+            "Isgalamido": 0
+        }
+    }
+}
+```
